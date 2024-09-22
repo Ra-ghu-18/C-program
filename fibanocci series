@@ -1,17 +1,16 @@
 #include<stdio.h>
-#include<conio.h>
-void main()
-{
-int num,sum_1,i=0,j=1,sum;
-clrscr();
-printf("enter a num :");
-scanf("%d",&num);
-for(;i<=num;)
-{
-sum=i+j;
-printf(" %d + %d = %d\n", i,j,sum);
-i=sum;
-j++;
+int main(){
+    int num1,num2,num3,n,i;
+    num1=0,num2=1;
+    num3=num1+num2;
+    printf("the no of terms: ");
+    scanf("%d",&n);
+    printf("the series is: %d ,%d, ",num1,num2);
+    for (i = 3; i <= n; i++) {
+    printf("%d, ", num3);
+    num1 = num2;
+    num2 = num3;
+    num3 = num1 + num2;
 }
-getch();
+return 0;
 }
