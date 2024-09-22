@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, num;
+    int min, max;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter %d numbers: ", n);
+    scanf("%d", &num);
+    min = max = num;
+
+    for (i = 1; i < n; i++) {
+        scanf("%d", &num);
+        if (num < min)
+            min = num;
+        if (num > max)
+            max = num;
+    }
+
+    int range = max - min;
+    printf("The range of the set of numbers is: %d\n", range);
+    return 0;
+}
+
+OUTPUT:
+
+Enter the number of elements: 5
+Enter 5 numbers: 12 
+36
+82
+15
+78
+The range of the set of numbers is: 70
+
